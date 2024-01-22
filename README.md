@@ -1,16 +1,18 @@
-# Speech Emotion Recognition Model by Jagadeesh Kokkula
+# Speech Emotion Recognition Model
 
-This project, led by **Jagadeesh Kokkula**, represents a significant undertaking in the field of Speech Emotion Recognition (SER). The primary objective of this project, spanning from June 2023 to November 2023, was to design and develop a robust model capable of identifying emotions such as Angry, Disgusted, Fearful, Happy, Neutral, Sad, and Surprised from audio data.
+This project, led by Me, is a major college project aimed at developing a Speech Emotion Recognition (SER) model using audio data. The model is trained to recognize emotions such as Angry, Disgusted, Fearful, Happy, Neutral, Sad, and Surprised. The entire project was self-learned by Jagadeesh Kokkula, without assistance from others.
 
-## Background
+## Overview
 
-As part of my college major project, I embarked on a self-learned journey to delve into the intricate domain of SER. The motivation behind this endeavor was to explore the fusion of machine learning, audio processing, and emotional intelligence, with the ultimate goal of contributing to advancements in human-computer interaction.
+The project spanned from June 2023 to November 2023 and served as a valuable learning experience in the field of machine learning and audio signal processing. This README.md provides an in-depth overview of the project, its structure, usage, and the underlying model architecture.
 
-## Dataset
+## Project Details
 
-The foundation of the project lies in a meticulously curated dataset sourced from [Kaggle](https://www.kaggle.com/code/vafaknm/speech-emotion-recognition-model/input). Noteworthy is the transformation of the dataset, where each emotion now resides in its dedicated folder, a modification introduced to enhance data organization and accessibility.
+### Dataset
 
-### Emotions
+The dataset used for training the model was obtained from [Kaggle](https://www.kaggle.com/code/vafaknm/speech-emotion-recognition-model/input). Jagadeesh Kokkula modified the original dataset to have separate folders for each emotion, making it more suitable for the SER model.
+
+#### Emotions
 - Angry
 - Disgusted
 - Fearful
@@ -19,79 +21,81 @@ The foundation of the project lies in a meticulously curated dataset sourced fro
 - Sad
 - Surprised
 
-## Project Structure
+### File Structure
 
-The project boasts a comprehensive structure, reflecting the commitment to clarity and organization. Key components include:
+```python
+import os
+import librosa
+import numpy as np
+import tensorflow
+from tensorflow import keras
+from sklearn.model_selection import train_test_split
+# ... (rest of the code)
+```
 
-- `train.py`: The script responsible for training the emotion recognition model.
-- `predict.py`: A script facilitating emotion prediction from an audio file.
-- `emotion_model.h5`: The culmination of the project - a trained model stored in HDF5 format.
-- `utils.py`: A utility script encapsulating functions for data loading, preprocessing, and model building.
-- `visualize_results.py`: A script for visualizing training history and model evaluation results.
-- `requirements.txt`: A file listing dependencies for straightforward installation.
+- `train.py`: Python script for training the emotion recognition model.
+- `predict.py`: Python script for predicting emotion from an audio file.
+- `emotion_model.h5`: Trained model saved in the Hierarchical Data Format (HDF5) file.
+- `utils.py`: Utility functions for data loading, preprocessing, and model building.
+- `visualize_results.py`: Script to visualize training history and model evaluation results.
+- `requirements.txt`: List of dependencies for installing required libraries.
 
-### Data Directory
-- `Emotions/`: A dedicated folder housing subfolders for each emotion along with their respective audio files.
+#### Data Directory
+- `Emotions/`: Folder containing subfolders for each emotion with audio files.
 
 ## Usage
 
-### Installation
+1. Install the required libraries by running:
 
-To replicate or extend the project, install the necessary dependencies using the following command:
 ```bash
 pip install -r requirements.txt
 ```
 
-### Training the Model
-
-The model training process is facilitated through the `train.py` script, offering flexibility with various hyperparameter configurations.
+2. Train the model using the following command:
 
 ```bash
 python train.py
 ```
 
-### Emotion Prediction
+The training script supports various hyperparameters that can be configured for experimentation.
 
-Predict emotions from an audio file using the `predict.py` script. Simply execute the following command and provide the path to the audio file when prompted:
+3. Predict emotion from an audio file:
 
 ```bash
 python predict.py
 ```
 
+You will be prompted to enter the path to the audio file.
+
 ## Model Architecture
 
-The heart of the project lies in the model architecture. A neural network with fully connected layers forms the backbone, augmented by batch normalization and dropout layers to mitigate overfitting. The architecture is customizable through the `build_model` function in `utils.py`.
+The emotion recognition model is a simple neural network with fully connected layers. Batch normalization and dropout are applied to prevent overfitting. Jagadeesh Kokkula implemented the model architecture and fine-tuned it for optimal performance.
 
-## Results and Visualization
+## Results
 
-To gain insights into the training process, utilize the `visualize_results.py` script, generating plots for accuracy and loss during model training.
+The training history and model evaluation results can be visualized by running:
 
 ```bash
 python visualize_results.py
 ```
 
+This script generates plots for accuracy and loss during training.
+
 ## Data Augmentation
 
-Augmenting the training data is a critical step, enhancing the model's ability to generalize. The custom `DataGenerator` class, defined in `utils.py`, enables real-time data augmentation.
+The training data is augmented using the `DataGenerator` class in `utils.py`. This class implements a custom data generator that allows for real-time data augmentation.
 
-## Personal Achievements
+## Project Duration
 
-This project is a testament to my commitment to self-learning and perseverance. Undertaken independently, I navigated the challenges of understanding complex concepts, implementing algorithms, and debugging issues. This project showcases my ability to independently conceive, design, and execute a machine learning project.
+The project was initiated in June 2023 and successfully completed by November 2023.
 
-## Connect with Me
+## Personal Information
 
-- **LinkedIn**: [Jagadeesh Kokkula](https://www.linkedin.com/in/jagadeeshkokkula/)
-- **GitHub**: [Nani8501](https://github.com/Nani8501)
-- **Website**: [Personal Website](https://nani8501.github.io/new.github.io/)
+- **Name:** Jagadeesh Kokkula
+- **LinkedIn:** [Jagadeesh Kokkula](https://www.linkedin.com/in/jagadeeshkokkula/)
+- **Website:** [Jagadeesh Kokkula's Website](https://nani8501.github.io/new.github.io/)
+- **GitHub:** [Jagadeesh Kokkula on GitHub](https://github.com/Nani8501)
 
-## Acknowledgments
+## Contribution 
 
-I extend my gratitude to the open-source community, Kaggle, and various online learning platforms for providing invaluable resources that facilitated my learning journey.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This project, born out of curiosity and dedication, is a testament to the power of self-directed learning. From conceptualization to implementation, it represents a significant milestone in my academic journey, demonstrating my capability to tackle complex problems and contribute meaningfully to the field.
+Contributions to the project are welcome! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request.
