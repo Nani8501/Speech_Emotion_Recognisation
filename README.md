@@ -1,6 +1,6 @@
 # Speech Emotion Recognition Model
 
-This project, led by Me, is a major college project aimed at developing a Speech Emotion Recognition (SER) model using audio data. The model is trained to recognize emotions such as Angry, Disgusted, Fearful, Happy, Neutral, Sad, and Surprised. The entire project was self-learned by Jagadeesh Kokkula, without assistance from others.
+This project, led by Me, is a major college project aimed at developing a Speech Emotion Recognition (SER) model using audio data. The model is trained to recognize emotions such as Angry, Disgusted, Fearful, Happy, Neutral, Sad, and Surprised.
 
 ## Overview
 
